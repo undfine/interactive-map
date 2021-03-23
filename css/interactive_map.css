@@ -1,0 +1,258 @@
+
+/* Hide footer on 'area-map-page' */
+body.area-map-page .site-footer {
+    display: none;
+}
+
+/* TRANSITIONs */
+.map-q1, .map-q2, .map-q3, .map-q4, .map-quadrant-toggle, .map-zoom-toggle{
+  -moz-transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.map-window {
+  animation: fadeIn 1000ms ease-Out 400ms forwards;
+  -webkit-animation: fadeIn 1000ms ease-Out 400ms forwards;
+}
+
+@keyframes fadeIn {0% { opacity: 0;} 100% { opacity: 1; }}
+@keyframes -webkit-fadeIn {0% { opacity: 0;} 100% { opacity: 1; }}
+
+/* ICONS */
+
+@font-face {
+  font-family: "Font Awesome";
+  src: url("../assets/webfonts/fa-solid-900.woff2") format("woff2"),
+       url("../assets/webfonts/fa-solid-900.woff") format("woff");
+}
+
+/*[class^="icon-"], [class*=" icon-"] { */
+.interactive-map-container .icon, .fa {
+    font-family: "Font Awesome";
+    font-weight: 900 !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.fa-times:before {
+    content: '\f00d';
+}
+
+.icon-zoomin3:before  { content: '\f00e'; }
+.icon-tree:before     { content: '\f1bb'; }
+.icon-direction:before { content: '\f277'; }
+.icon-crosshairs:before { content: '\f05b'; }
+.icon-flag:before     { content: '\f024'; }
+.icon-map-pin:before  { content: '\f276'; }
+.icon-direction:before  { content: '\f277'; }
+.icon-utensils:before   { content: '\f2e7'; }
+.icon-wine-glass:before { content: '\f4e3'; }
+.icon-wheelchair:before { content: '\f193'; }
+.icon-utensils:before { content: '\f2e7'; }
+.icon-map:before      { content: '\f279'; }
+.icon-leaf:before     { content: '\f06c'; }
+.icon-home:before     { content: '\f015'; }
+.icon-martini:before  { content: '\f000'; }
+.icon-biking:before   { content: '\f84a'; }
+.icon-hiking:before   { content: '\f6ec'; }
+.icon-walking:before  { content: '\f554'; }
+.icon-spa:before      { content: '\f5bb'; }
+.icon-mountain:before { content: '\f6fc'; }
+.icon-leaf:before     { content: '\f06c'; }
+.icon-ski:before      { content: '\f7c9'; }
+
+
+
+/* INTERACTIVE MAPS */
+
+.experience-map-item {display:block; position:relative; width:720px; max-width:90%; margin:auto; padding:40px; text-align:center; background:#9b4521; background:rgba(155,69,33,0.9);}
+.zoomContainer {z-index:998;}
+.zoomWindowContainer { width:64.5% !important; height:30% !important; display:block; position:absolute; bottom:0; left:2.5% !important; margin-top:-200px; }
+.zoomWindowContainer .zoomWindow { width:100% !important; height:100% !important; left:0 !important; top:0 !important; }
+
+/* TOGGLES */
+.map-toggles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: block;
+  width: auto;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  /* background-color: #639779; */
+}
+.map-toggles ul {margin:0; padding:0; list-style: none;}
+.map-toggle, .map-zoom-toggle {display:inline-block; padding:10px 20px; line-height:20px; font-size:14px; margin:3px 6px; text-align:center; color:#9abba8; background-color:#19613b; vertical-align:middle; cursor:pointer; border:1px solid #19613b;}
+
+.map-zoom-toggle { color:#ffffff; border-color:#9abba8;}
+.map-toggle:hover {background:#9abba8; color:#ffffff;}
+.map-toggle:active {background:#ffffff; border-color:#9abba8; color:#19613b !important;}
+.map-toggle.active {color:#ffffff; border-color:#9abba8;}
+.map-toggle span, .map-zoom-toggle span {font-size:150%; line-height:20px; vertical-align:middle; color:#639779; margin-right:10px;}
+.map-zoom-toggle .icon-number, .map-zoom-toggle .icon-number2, .map-zoom-toggle .icon-number3 {font-size:200%; line-height:20px; vertical-align:middle; color:#9abba8; background:none; margin:0 4px; }
+.map-zoom-toggle span.active {color:#ffffff;}
+
+.map-zoom-toggle .zoom-number {
+  font-family: 'Roboto';
+  font-size: 1em;
+  font-weight: 800;
+  line-height: 1.3em;
+  padding: 0.2em;
+  border: .11em solid rgba(255,255,255,0.8);
+  color: rgba(255,255,255,0.4);
+  width: 1.3em;
+  height: 1.3em;
+  border-radius: 50%;
+  display: inline-block;
+  margin: -0.125em .5em;
+  vertical-align: middle;
+}
+
+.map-zoom-toggle .zoom-number.active {
+  border-color: #ffffff;
+  color:#ffffff;
+}
+
+/* HOMESITE MAP */
+
+.homesite-map .map-content .lot-path {
+    fill: transparent;
+}
+.homesite-map .map-content .lot-path.active.lot {
+    fill: url(#pinIcon);
+    transform: translateY(1em);
+}
+.homesite-map .map-content .lot-path.active.home {
+    fill: url(#homeIcon);
+}
+
+.homesite-map .map-window { width:100%; height:0; padding-bottom:69.47%; position:relative; display:block; z-index:5; margin:0;}
+.homesite-map .map-viewport { position:absolute; top:0; left:0; right:0; bottom:0; height:100%; width:100%; margin:0; padding:0; z-index:10; overflow:hidden; }
+.homesite-map .map-content-wrapper { position:absolute; top:0%; left:0%; right:0%; bottom:0%; height:100% !important; width:100% !important; margin:0; padding:0; z-index:15;}
+.homesite-map .map-content { display:block; position:absolute; z-index:20; margin:0; padding:0; background-color:#eee; background-image:url('../assets/nakoma_area_map_blank.jpg'); background-position:left top !important; background-size:100% 100% !important; cursor: url('../assets/cursor_pan.png'), all-scroll; width:100% !important; height:100% !important; left:0%; top:0%; }
+.homesite-map .map-content .map-data {display:block; position:relative; z-index:25; margin:0; padding:0; width:100%;}
+.homesite-map .map-content .lot-data {width:100%; height:auto;}
+/* Original
+.homesite-map .map-content .lot-path {fill:#fff; fill-opacity:0; }
+.homesite-map .map-content .lot-path.active { fill:#fff; fill-opacity:0.25; }
+.homesite-map .map-content .lot-path.active:hover { fill:#b2875a; fill-opacity:0.2; stroke:#b2875a; stroke-width:10px; stroke-linecap:butt;}
+*/
+
+.homesite-map .map-content .golf-hole {fill:#fff; fill-opacity:0;}
+.homesite-map .map-content .golf-hole:hover { fill:#708950; fill-opacity:0.1; stroke:#ffffff; stroke-width:6px; stroke-opacity:0.6;}
+.homesite-map .map-content .focal-point {fill:#fff; fill-opacity:0; }
+.homesite-map .map-content .focal-point:hover { fill:#ffffff; fill-opacity:0.1; stroke:#ffffff; stroke-width:6px; stroke-opacity:0.6;}
+.homesite-map .map-content .trail-line {fill:#fff; fill-opacity:0; }
+.homesite-map .map-content .trail-line:hover { fill:#ffffff; fill-opacity:0.1; stroke:#ffffff; stroke-width:6px; stroke-opacity:0.6;}
+.homesite-map .map-content .lot-number { font-family:'Neutra', 'Helvetica Neue', 'Open Sans', Helvetica, sans-serif; fill:#ffffff; color:#000; fill-opacity:0.0; font-size:28px; font-weight:bold; letter-spacing:1px; text-anchor:middle; transform: translateY(0.5em); pointer-events: none;}
+.homesite-map .map-content .lot-number.active {color:#ffffff; fill-opacity:0.9;}
+.homesite-map .map-content .lot-number:hover {fill:#000000;}
+.homesite-map .map-content .map-layer {display:none; position:absolute; top:0; left:0; width:100%; height:0; z-index:21; background-size:100% auto; background-position:top left; background-color:transparent;}
+.disabled > .lot-path, .disabled > .golf-hole, .disabled > .focal-point, .disabled > .trail-line {fill-opacity:0 !important; fill:transparent !important; visibility:hidden !important; display:none !important;}
+.homesite-map .map-content .map-layer.active {display:block;}
+.homesite-map .map-viewport.zoom1 .map-content-wrapper { top:0%; left:0%; right:0%; bottom:0%; height:100% !important; width:100% !important; }
+.homesite-map .map-viewport.zoom1 .map-content { width:100% !important; height:100% !important; left:0%; top:0%; }
+.homesite-map .map-viewport.zoom1 .map-content .lot-number {font-size:2.5em;}
+.homesite-map .map-viewport.zoom2 .map-content-wrapper { top:-50%; left:-50%; right:-50%; bottom:-50%; height:200% !important; width:200% !important; }
+.homesite-map .map-viewport.zoom2 .map-content { width:75% !important; height:75% !important; left:12.5%; top:12.5%; }
+.homesite-map .map-viewport.zoom3 .map-content .lot-number {font-size:2em;}
+.homesite-map .map-viewport.zoom3 .map-content-wrapper { top:-100%; left:-100%; right:-100%; bottom:-100%; height:300% !important; width:300% !important; }
+.homesite-map .map-viewport.zoom3 .map-content { width:66.667% !important; height:66.667% !important; left:16.667%; top:16.667%; }
+.homesite-map .map-viewport.zoom3 .map-content .lot-number {font-size:1.5em;}
+.homesite-map .map-viewport.zoomq1 .map-content-wrapper { top:0; left:0; right:auto; bottom:auto; height:200% !important; width:200% !important; }
+.homesite-map .map-viewport.zoomq1 .map-content { width:100% !important; height:100% !important; left:0; top:0; }
+.homesite-map .map-viewport.zoomq2 .map-content-wrapper { top:0; left:auto; right:0; bottom:auto; height:200% !important; width:200% !important; }
+.homesite-map .map-viewport.zoomq2 .map-content { width:100% !important; height:100% !important; right:0; top:0; }
+.homesite-map .map-viewport.zoomq3 .map-content-wrapper { top:auto; left:0; right:auto; bottom:0; height:200% !important; width:200% !important; }
+.homesite-map .map-viewport.zoomq3 .map-content { width:100% !important; height:100% !important; left:0; bottom:0; }
+.homesite-map .map-viewport.zoomq4 .map-content-wrapper { top:auto; left:auto; right:0; bottom:0; height:200% !important; width:200% !important; }
+.homesite-map .map-viewport.zoomq4 .map-content { width:100% !important; height:100% !important; right:0; bottom:0; }
+.map-viewport.zoomq1 .map-content .lot-number, .map-viewport.zoomq2 .map-content .lot-number, .map-viewport.zoomq3 .map-content .lot-number, .map-viewport.zoomq4 .map-content .lot-number {font-size:18px;}
+
+.homesite-map .map-info {position:absolute; left:90%; top:90%; display:block; z-index:25; width:auto; height:auto;}
+.homesite-map .map-quadrants {display:block; width:100%; height:100%; position:absolute; left:0; top:0; z-index:25;}
+.homesite-map .map-quadrants.disabled, .map-viewport.zoomq1 .map-quadrants, .map-viewport.zoomq2 .map-quadrants, .map-viewport.zoomq3 .map-quadrants, .map-viewport.zoomq4 .map-quadrants {display:none; z-index:-1;}
+.map-quadrants .map-q1, .map-quadrants .map-q2, .map-quadrants .map-q3, .map-quadrants .map-q4 {position:absolute; z-index:30; width:50%; height:50%; border:0px solid transparent; color:transparent; }
+.map-quadrants .map-q1:hover, .map-quadrants .map-q2:hover, .map-quadrants .map-q3:hover, .map-quadrants .map-q4:hover {border:10px solid #87b1b8; border-color:rgba(135,177,184,0.6); background-color:rgba(135,177,184,0.2); cursor:url('../assets/cursor_view.png'), pointer; color:#87b1b8;}
+.map-quadrants .map-q1:after, .map-quadrants .map-q2:after, .map-quadrants .map-q3:after, .map-quadrants .map-q4:after {content:'ENLARGE'; display:block; position:absolute; left:50%; top:50%; margin-left:-50px; margin-top:-20px; line-height:40px; width:100px; font-family:inherit; font-size:30px; font-weight:bold; letter-spacing:4px; color:inherit;}
+.map-quadrants .map-q1 {left:0; top:0;}
+.map-quadrants .map-q2 {right:0; top:0;}
+.map-quadrants .map-q3 {left:0; bottom:0;}
+.map-quadrants .map-q4 {right:0; bottom:0;}
+
+/* Cursors */
+.homesite-map .map-content { cursor: zoom-in;}
+.homesite-map .map-content .lot-number,
+.homesite-map .map-content .lot-path.active,
+.homesite-map .map-content .golf-hole,
+.homesite-map .map-content .focal-point,
+.homesite-map .map-content .trail-line{
+  /*cursor:url('../assets/cursor_view.png'), pointer; */
+    cursor: pointer;
+}
+
+/* MORE HOMESITE STUFF */
+
+.interactive-map-container, .homesite-basemap {display:block !important; position:relative !important; width:100% !important; height:auto !important;}
+.homesite-lot-data {position:relative; z-index:5; border-top:1px solid #999;}
+map {display:block;}
+map area {background:transparent; background:rgba(0, 0, 0, 0.2); display:block;}
+map area:hover {background:#fff; background:rgba(255, 255, 255, 0.5);}
+.sold-indicator {position:absolute; display:block; width:120px; margin:0 0 -2px -60px; text-align:center; bottom:0; left:50%; z-index:2; letter-spacing:4px; font-size:24px; font-weight:bold; color:#f0f0f0; }
+.lot-screen {position:fixed; width:100%; height:100%; top:0; bottom:0; z-index:-1; background:#303030; background:rgba(0,0,0, 0.4); display:none;}
+.lot-inner {position:absolute; width:800px; height:auto; max-width:90%; min-height:240px; top:50%; left:50%; transform:translate(-50%, -50%); -webkit-transform:translate(-50%, -50%); display:block; background:#f0f0f0; -moz-box-shadow:0 5px 10px rgba(0,0,0,0.75); -webkit-box-shadow:0 5px 10px rgba(0,0,0,0.75); box-shadow:0 5px 10px rgba(0,0,0,0.75); }
+.lot-inner {display:flex; flex-direction: row;}
+.lot-images, .lot-content {flex:1 1 auto;}
+.lot-holder {display:none; padding:8px 30px; text-align:left; color:#202020; border-bottom:1px solid #999; cursor:pointer; background:#fff;}
+.lot-holder:hover {background:#e0e0e0;}
+.lot-holder:first-child {border-bottom:1px solid #999;}
+.lot-content {position:relative; width:50%; float:left; display:block; height:auto; text-align:left; color:#202020; padding:30px 40px; }
+.lot-content.fullwidth {width:100%; float:none;}
+.lot-name {font-size:32px; line-height:1; margin:0; color:#639779; width:100%; display:block; text-transform:capitalize;}
+.lot-caption {font-size: 1.1em; line-height: 1.5; letter-spacing: 0px; font-weight: 300; color: #214147; margin: 0.5em 0 0;}
+.lot-size {font-size:16px; line-height:1.4; letter-spacing:4px; font-weight:bold; color:#77787b; margin-bottom:10px;}
+.lot-size span {font-size:80%;}
+ul.lot-features {padding-inline-start: 0px;}
+.lot-feature {font-size:13px; line-height:1; display:inline-block; list-style:none; background:#86b3b9; color:#ffffff; padding:4px 8px; margin:2px; text-transform:uppercase;}
+.lot-feature:first-of-type {margin-left:0;}
+.lot-description {display:block; font-size:15px; line-height:1.4; margin-bottom:10px; margin-top:10px;}
+.lot-description * {font-size:inherit; line-height:inherit; margin:0;}
+.lot-file {display:inline-block; padding:4px 20px; margin:0; border:2px solid #9b4521; color:#9b4521; font-weight:bold; font-size:12px; line-height:15px; letter-spacing:2px; text-transform:uppercase;}
+.lot-file span {font-weight:bold; font-size:120%; line-height:15px;}
+.lot-file:hover {background:#9b4521; color:#ffffff;}
+.lot-file:active {background:#231e21; border-color:#231e21; color:#ffffff;}
+.lot-images {position:relative; width:50%; float:left; height:0; padding-bottom:37.5%; overflow:hidden; z-index:1;}
+.lot-images-inner {position:absolute; display:block; width:100%; height:100%; overflow:hidden; margin:0; left:0; top:0; -moz-transition:all .6s ease-in-out; -webkit-transition:all .6s ease-in-out; -o-transition:all .6s ease-in-out; transition:all .6s ease-in-out; z-index:3;}
+.lot-images-inner > div {display:block; position:relative; margin:0; width:100%; height:100%; background-size:cover; background-position:center center; background-color:#e2e2e3; background-repeat:no-repeat; float:left;}
+.lot-slider-nav {position:absolute; display:block; width:100%; height:40px; top:50%; left:0; margin:-20px 0 0 0; z-index:5;}
+.lot-slider-prev, .lot-slider-next {position:absolute; top:0; display:block; color:#fff !important; height:40px; width:30px; line-height:40px; text-align:center; font-size:40px; font-weight:300; -moz-transition:all .3s ease-in-out; -webkit-transition:all .3s ease-in-out; -o-transition:all .3s ease-in-out; transition:all .3s ease-in-out;}
+.lot-slider-prev {left:0;}
+.lot-slider-next {right:0;}
+.lot-slider-prev:hover, .lot-slider-next:hover {color:#ccc !important;}
+.item-button {font-weight:bold; letter-spacing:3px; font-size:13px; color:#9b4521; text-transform:uppercase;}
+.item-button:hover {color:#231e21;}
+.item-button:active {color:#000000;}
+.close { color:#999999; cursor: pointer; position:absolute; display:block; top:0.5em; right:0.5em; font-size:1em; line-height:1; text-align:center; vertical-align:middle;}
+.close:hover, .close:focus {color:#639779!important;}
+.close:active {color:#000000 !important;}
+
+@media only screen and (max-width: 640px) {
+/*.lot-holder {display:block !important;} */
+.lot-content {width:100%; float:none;}
+.lot-images {position:relative; width:100%; float:none; margin: 10px auto;}
+.lot-file a img {width:36px !important;}
+.lot-holder .lot-images, .lot-holder .lot-file, .lot-holder .lot-desc, .lot-holder .close {display:none;}
+.lot-holder.active {background:#f0f0f0 !important;}
+.lot-holder.active .lot-images, .lot-holder.active .lot-file, .lot-holder.active .lot-desc {display:block !important;}
+.lot-holder .lot-name, .lot-holder .lot-desc, .lot-holder .lot-file {background:none !important; color:#202020 !important; padding:4px 0 !important; height:auto !important;}
+}

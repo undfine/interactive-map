@@ -1,0 +1,940 @@
+[
+    {
+        "key": "group_5a8a40ad0c5d3",
+        "title": "Interactive Map",
+        "fields": [
+            {
+                "key": "field_5aa9aeab4fbd0",
+                "label": "Enable Controls",
+                "name": "enable_map_controls",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 1,
+                "ui": 1,
+                "ui_on_text": "Show",
+                "ui_off_text": "Hide"
+            },
+            {
+                "key": "field_5ed5554610911",
+                "label": "Enable Layer Toggles",
+                "name": "enable_map_toggles",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 1,
+                "ui": 1,
+                "ui_on_text": "Show",
+                "ui_off_text": "Hide"
+            },
+            {
+                "key": "field_5aaa18221fa42",
+                "label": "Enable Map Datapoints",
+                "name": "enable_map_lots",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 1,
+                "ui": 1,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
+            {
+                "key": "field_5ed54f20f7ec9",
+                "label": "Filter Data Types",
+                "name": "filter_map_datatypes",
+                "type": "taxonomy",
+                "instructions": "Select the data types to show. Deselect all to show ALL",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "taxonomy": "mapdatatype",
+                "field_type": "checkbox",
+                "allow_null": 0,
+                "add_term": 0,
+                "save_terms": 0,
+                "load_terms": 0,
+                "return_format": "id",
+                "multiple": 0
+            },
+            {
+                "key": "field_5a8a53ae78b6c",
+                "label": "Map Base Background",
+                "name": "map_base",
+                "type": "image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "id",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5a8a446f0621d",
+                "label": "Map Additional Layers",
+                "name": "map_layers",
+                "type": "repeater",
+                "instructions": "Add background imagery here.  These will be stacked on top of each other, positioned absolutely from the top left.  First layer will be on bottom, followed by every subsequent layer.  Each of these will be placed on top of the base background image.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "Add New Map Layer",
+                "sub_fields": [
+                    {
+                        "key": "field_5a8a44960621e",
+                        "label": "Map Layer Image",
+                        "name": "map_layer_image",
+                        "type": "image",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "url",
+                        "preview_size": "thumbnail",
+                        "library": "all",
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": "",
+                        "mime_types": "jpg, jpeg, png, gif, svg"
+                    },
+                    {
+                        "key": "field_5a8a458b0621f",
+                        "label": "Visibility of Layer",
+                        "name": "map_layer_visibility",
+                        "type": "true_false",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "message": "",
+                        "default_value": 1,
+                        "ui": 1,
+                        "ui_on_text": "Always visible",
+                        "ui_off_text": "Use button to toggle"
+                    },
+                    {
+                        "key": "field_5a8a464606220",
+                        "label": "Layer Title",
+                        "name": "map_layer_title",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "Layer Name",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_5ed5346981d59",
+                        "label": "Layer Type",
+                        "name": "map_layer_type",
+                        "type": "taxonomy",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "taxonomy": "mapdatatype",
+                        "field_type": "radio",
+                        "allow_null": 0,
+                        "add_term": 0,
+                        "save_terms": 0,
+                        "load_terms": 0,
+                        "return_format": "id",
+                        "multiple": 0
+                    },
+                    {
+                        "key": "field_5a90a40909141",
+                        "label": "Icon For Toggle",
+                        "name": "map_layer_icon",
+                        "type": "select",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "choices": {
+                            "none": "No Icon",
+                            "compass": "Compass Icon",
+                            "grid-2": "Grid View Icon",
+                            "move": "Direction Arrows Icon",
+                            "direction": "Labels Icon",
+                            "tree": "Trails Icon",
+                            "info": "Info Icon",
+                            "location2": "Location Icon",
+                            "eye4": "Eye Icon",
+                            "zoomin3": "Zoom-In Icon",
+                            "zoomout3": "Zoom-Out Icon"
+                        },
+                        "default_value": [
+                            "none"
+                        ],
+                        "allow_null": 0,
+                        "multiple": 0,
+                        "ui": 1,
+                        "ajax": 0,
+                        "return_format": "value",
+                        "placeholder": ""
+                    }
+                ]
+            },
+            {
+                "key": "field_5a8a473806222",
+                "label": "SVG Code",
+                "name": "map_code",
+                "type": "wysiwyg",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "text",
+                "toolbar": "basic",
+                "media_upload": 0,
+                "delay": 0
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "interactive_map"
+                }
+            ],
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "interactive_map"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": [
+            "permalink",
+            "the_content",
+            "excerpt",
+            "custom_fields",
+            "discussion",
+            "comments",
+            "revisions",
+            "slug",
+            "author",
+            "format",
+            "page_attributes",
+            "featured_image",
+            "categories",
+            "tags",
+            "send-trackbacks"
+        ],
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_5a8e09a7ba7f7",
+        "title": "Lot\/Map Data Fields",
+        "fields": [
+            {
+                "key": "field_5a8e0a40c3098",
+                "label": "Type of Map Data",
+                "name": "m_bool_type",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 1,
+                "ui": 1,
+                "ui_on_text": "Homesite Lot",
+                "ui_off_text": "Other Map Data"
+            },
+            {
+                "key": "field_5a8e0b4bc309c",
+                "label": "Homesite Lot Number",
+                "name": "h_lot_number",
+                "type": "number",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5a8e0a40c3098",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Common name for this homesite lot",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "min": 1,
+                "max": 999,
+                "step": 1
+            },
+            {
+                "key": "field_5a8e0ddac309d",
+                "label": "Homesite APN Code",
+                "name": "h_apn_code",
+                "type": "text",
+                "instructions": "Paste APN code for this lot",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5a8e0a40c3098",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5a8e1d3d54132",
+                "label": "Street Address of Homesite",
+                "name": "h_address",
+                "type": "text",
+                "instructions": "Enter the street address for this homesite.",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5a8e0a40c3098",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5a8e0e33c309e",
+                "label": "Lot Size (Acres)",
+                "name": "h_acres",
+                "type": "text",
+                "instructions": "Enter size of lot in acres (ex: 1.95)",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5a8e0a40c3098",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "acres",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5a8e0f2ac30a0",
+                "label": "Is sold or sale pending?",
+                "name": "h_bool_sold",
+                "type": "true_false",
+                "instructions": "Check this box if site is sold to remove from map offering.",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5a8e0a40c3098",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 1,
+                "ui_on_text": "Sold \/ Pending",
+                "ui_off_text": "Lot Still Available"
+            },
+            {
+                "key": "field_5a8e0e97c309f",
+                "label": "Lot Pricing (USD)",
+                "name": "h_price",
+                "type": "number",
+                "instructions": "Enter current pricing of the homesite lot.",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5a8e0a40c3098",
+                            "operator": "==",
+                            "value": "1"
+                        },
+                        {
+                            "field": "field_5a8e0f2ac30a0",
+                            "operator": "!=",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "$",
+                "append": ".00 (USD)",
+                "min": 0,
+                "max": 5000000,
+                "step": ""
+            },
+            {
+                "key": "field_5a8e1080c30a2",
+                "label": "Lot Features",
+                "name": "h_features",
+                "type": "select",
+                "instructions": "Select all features of this homesite lot.",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5a8e0a40c3098",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "View": "View",
+                    "Open Space": "Open Space",
+                    "Resort Core": "Resort Core",
+                    "Golf Course Frontage": "Golf Course Frontage",
+                    "Feather River": "Feather River",
+                    "Ridgetop": "Ridgetop",
+                    "Forest Preserve": "Forest Preserve",
+                    "National Forest": "National Forest",
+                    "Mountaintop": "Mountaintop",
+                    "House Plans": "House Plans",
+                    "Unique": "Unique"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 1,
+                "ui": 1,
+                "ajax": 0,
+                "return_format": "label",
+                "placeholder": ""
+            },
+            {
+                "key": "field_5a8e12a4c30a3",
+                "label": "Full Description",
+                "name": "h_description",
+                "type": "wysiwyg",
+                "instructions": "Enter full description for this homesite lot.  Accepts basic text styling.",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5a8e0a40c3098",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "visual",
+                "toolbar": "basic",
+                "media_upload": 0,
+                "delay": 0
+            },
+            {
+                "key": "field_5a8e131bc30a5",
+                "label": "Provide a downloadable file?",
+                "name": "h_bool_file",
+                "type": "true_false",
+                "instructions": "If this lot has a PDF or other accompanying file, check here to provide.",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5a8e0a40c3098",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 1,
+                "ui_on_text": "No attachments",
+                "ui_off_text": "Upload file"
+            },
+            {
+                "key": "field_5a8e130bc30a4",
+                "label": "File Download",
+                "name": "h_file",
+                "type": "file",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5a8e0a40c3098",
+                            "operator": "==",
+                            "value": "1"
+                        },
+                        {
+                            "field": "field_5a8e131bc30a5",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "library": "all",
+                "min_size": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5a8e14394d6e5",
+                "label": "Name of this Map Item",
+                "name": "m_name",
+                "type": "text",
+                "instructions": "Provide the label to be shown for this map data type (ex: Hole #1, Feather River, etc.)",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5a8e0a40c3098",
+                            "operator": "!=",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5a8e14b74d6e7",
+                "label": "Caption Underneath Name",
+                "name": "m_caption",
+                "type": "text",
+                "instructions": "Displays underneath the title, used to indicate extra information.  Leave blank to hide.",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5a8e0a40c3098",
+                            "operator": "!=",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5a8e166c3d36f",
+                "label": "Full Description",
+                "name": "m_description",
+                "type": "wysiwyg",
+                "instructions": "Enter full description for this map item.  Accepts basic text styling.",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5a8e0a40c3098",
+                            "operator": "!=",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "visual",
+                "toolbar": "basic",
+                "media_upload": 0,
+                "delay": 0
+            },
+            {
+                "key": "field_5a8e15fb4d6ea",
+                "label": "Add media?",
+                "name": "m_bool_media",
+                "type": "true_false",
+                "instructions": "Used to enable the media options.",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5a8e0a40c3098",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ],
+                    [
+                        {
+                            "field": "field_5a8e0a40c3098",
+                            "operator": "!=",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 1,
+                "ui_on_text": "Yes, add media",
+                "ui_off_text": "No, text only"
+            },
+            {
+                "key": "field_5a8e14f94d6e8",
+                "label": "Image(s)",
+                "name": "m_images",
+                "type": "gallery",
+                "instructions": "Choose one or more images to use as a slider in popup.  Leave blank for no images.",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5a8e0a40c3098",
+                            "operator": "==",
+                            "value": "1"
+                        },
+                        {
+                            "field": "field_5a8e15fb4d6ea",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ],
+                    [
+                        {
+                            "field": "field_5a8e0a40c3098",
+                            "operator": "!=",
+                            "value": "1"
+                        },
+                        {
+                            "field": "field_5a8e15fb4d6ea",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "min": "",
+                "max": "",
+                "insert": "append",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5a8e16e010571",
+                "label": "Add button?",
+                "name": "m_bool_button",
+                "type": "true_false",
+                "instructions": "Allows a button to be added to the end of the description in popup.",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5a8e0a40c3098",
+                            "operator": "!=",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 1,
+                "ui_on_text": "Add button",
+                "ui_off_text": "No button"
+            },
+            {
+                "key": "field_5a8e175f10572",
+                "label": "Link to URL",
+                "name": "m_button_link",
+                "type": "text",
+                "instructions": "Enter the URL this button should link to.",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5a8e0a40c3098",
+                            "operator": "!=",
+                            "value": "1"
+                        },
+                        {
+                            "field": "field_5a8e16e010571",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5a8e4763ee5c2",
+                "label": "Button Text",
+                "name": "m_button_text",
+                "type": "text",
+                "instructions": "Enter the text displayed within the button.",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5a8e0a40c3098",
+                            "operator": "!=",
+                            "value": "1"
+                        },
+                        {
+                            "field": "field_5a8e16e010571",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Download",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5a8e179c10574",
+                "label": "Link Target",
+                "name": "m_button_target",
+                "type": "true_false",
+                "instructions": "Choose either to open this link in a new window or in the same one.",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5a8e0a40c3098",
+                            "operator": "!=",
+                            "value": "1"
+                        },
+                        {
+                            "field": "field_5a8e16e010571",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 1,
+                "ui": 1,
+                "ui_on_text": "Self, same window",
+                "ui_off_text": "Blank, new window"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "mapinfo"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    }
+]
