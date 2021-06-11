@@ -11,15 +11,16 @@ add_action( 'wp_enqueue_scripts', 'nmap_enqueue_scripts' );
 function nmap_enqueue_scripts(){
 
   // Enqueue required jQuery libraries
-  wp_enqueue_script('jquery-ui-core');
-  wp_enqueue_script('jquery-ui-widget');
-  wp_enqueue_script('jquery-ui-mouse');
+  //wp_enqueue_script('jquery-ui-core');
+  //wp_enqueue_script('jquery-ui-widget');
+  //wp_enqueue_script('jquery-ui-mouse');
+  //wp_enqueue_script('jquery-ui-draggable');
   //wp_enqueue_script('jquery-ui-accordion');
   //wp_enqueue_script('jquery-ui-autocomplete');
   //wp_enqueue_script('jquery-ui-slider');
   //wp_enqueue_script('jquery-ui-tabs');
   //wp_enqueue_script('jquery-ui-sortable');
-  wp_enqueue_script('jquery-ui-draggable');
+
   //wp_enqueue_script('jquery-ui-droppable');
   //wp_enqueue_script('jquery-ui-datepicker');
   //wp_enqueue_script('jquery-ui-resize');
