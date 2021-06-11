@@ -32,11 +32,11 @@
     <text class="lot-number" x="2545" y="1468" data-name="5">5</text>
     <text class="lot-number" x="2902" y="1656" data-name="24">24</text>
     <text class="lot-number" x="2981" y="1314" data-name="26">26</text>
-    <text class="lot-number" x="2080" y="907" data-name="86">86</text>
-    <text class="lot-number" x="2124" y="850" data-name="78">78</text>
     <text class="lot-number" x="2650" y="860" data-name="61">61</text>
     <text class="lot-number" x="2605" y="870" data-name="70">70</text>
     <text class="lot-number" x="2316" y="885" data-name="71">71</text>
+    <text class="lot-number" x="2124" y="850" data-name="78">78</text>
+    <text class="lot-number" x="2080" y="907" data-name="86">86</text>
     <text class="lot-number" x="2052" y="993" data-name="98">98</text>
     <text class="lot-number" x="2456" y="1522" data-name="116">116</text>
     <text class="lot-number" x="2272" y="1357" data-name="123">123</text>
@@ -48,5 +48,5 @@
     <text class="lot-number" x="1650" y="1759" data-name="218">218</text>
     <text class="lot-number" x="1354" y="2091" data-name="234">234</text>
     <text class="lot-number" x="2300" y="1159" data-name="Boarding House Shares">Lodge</text>
-  </g>
+</g>
 </svg>
